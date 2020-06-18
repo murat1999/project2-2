@@ -10,7 +10,7 @@ package simplejavacalculator;
 
 public class SimpleJavaCalculator {
    /**
-    * comment.
+    * {@inheritDoc}.
     */
    public static void main(final String[] args) {
       try {
