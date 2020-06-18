@@ -1,9 +1,9 @@
-/**
+/*
  * @name        Simple Java Calculator
  * @file        Calculator.java
- * @author      SORIA Pierre-Henry
- * @copyright   Copyright Pierre-Henry SORIA, All Rights Reserved.
- * @license     Apache (http://www.apache.org/licenses/LICENSE-2.0)
+ * @author      Soria Pierre-Henry
+ * @copyright   Copyright Pierre-Henry Soria, All Rights Reserved.
+ * @license     Apache (http://www.apache.org/licenses/LICENSE-2.0).
  */
 
 package simplejavacalculator;
@@ -14,10 +14,11 @@ import static java.lang.Math.pow;
 
 public class Calculator {
 
+    /** declaration. */
     public enum BiOperatorModes {
         normal, add, minus, multiply, divide , xPowerOfY
     }
-
+    /** declaration. */
     public enum MonoOperatorModes {
         square, squareRoot, oneDividedBy, cos, sin, tan ,log , rate, abs
     }
