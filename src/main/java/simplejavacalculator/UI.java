@@ -233,7 +233,7 @@ public class UI implements ActionListener {
       }
       if (source == butxpowerofy) {
          writer(calc
-                   .calculateBi(Calculator.BiOperatorModes.xpowerofy, reader()));
+                   .calculateBi(Calculator.BiOperatorModes.xPowerOfY, reader()));
       }
       
       if (source == butSquare) {
@@ -248,7 +248,7 @@ public class UI implements ActionListener {
       
       if (source == butOneDevidedBy) {
          writer(calc.calculateMono(
-                                   Calculator.MonoOperatorModes.oneDevidedBy, reader()));
+                                   Calculator.MonoOperatorModes.oneDividedBy, reader()));
       }
       
       if (source == butCos) {
