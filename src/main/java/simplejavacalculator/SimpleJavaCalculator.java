@@ -9,6 +9,7 @@
 package simplejavacalculator;
 
 public class SimpleJavaCalculator {
+   /** comment. */
    public static void main(final String[] args) {
       try {
          UI uiCal = new UI();
