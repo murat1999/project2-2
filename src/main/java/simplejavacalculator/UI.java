@@ -1,9 +1,9 @@
-/**
+/*
  * @name        Simple Java Calculator
  * @file        UI.java
- * @author      SORIA Pierre-Henry
- * @copyright   Copyright Pierre-Henry SORIA, All Rights Reserved.
- * @license     Apache (http://www.apache.org/licenses/LICENSE-2.0)
+ * @author      Soria Pierre-Henry
+ * @copyright   Copyright Pierre-Henry Soria, All Rights Reserved.
+ * @license     Apache (http://www.apache.org/licenses/LICENSE-2.0).
  */
 
 package simplejavacalculator;
@@ -24,9 +24,7 @@ import javax.swing.BoxLayout;
 import java.io.*;
 
 public class UI implements ActionListener {
-   
    private final JFrame frame;
-   
    private final JPanel panel;
    private final JPanel panelSub1;
    private final JPanel panelSub2;
@@ -36,7 +34,6 @@ public class UI implements ActionListener {
    private final JPanel panelSub6;
    private final JPanel panelSub7;
    private final JPanel panelSub8;
-   
    private final JTextArea text;
    private final JButton but[], butAdd, butMinus, butMultiply, butDivide,
       butEqual, butCancel, butSquareRoot, butSquare, butOneDevidedBy,
