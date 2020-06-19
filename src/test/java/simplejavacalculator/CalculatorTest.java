@@ -56,6 +56,18 @@ public class CalculatorTest {
         Assert.assertEquals((Double) NaN, result);
     }
     @Test
+    public void TestingTan4() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.TAN, 180.0);
+        Assert.assertEquals((Double) 0.0, result);
+    }
+    @Test
+    public void TestingTan5() {
+        Calculator c = new Calculator();
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.TAN, 270.0);
+        Assert.assertEquals((Double) NaN, result);
+    }
+    @Test
     public void TestingLog() {
         Calculator c = new Calculator();
         Double result = c.calculateMono(Calculator.MonoOperatorModes.LOG, 10000.0);
@@ -70,8 +82,10 @@ public class CalculatorTest {
     @Test
     public void TestingAbs() {
         Calculator c = new Calculator();
-        Double result = c.calculateMono(Calculator.MonoOperatorModes.ABS, -3.0);
+        Double result = c.calculateMono(Calculator.MonoOperatorModes.ABS, 3.0);
+        Double result2 = c.calculateMono(Calculator.MonoOperatorModes.ABS, -3.0);
         Assert.assertEquals((Double) 3.0, result);
+        Assert.assertEquals((Double) 3.0, result2);
     }
     @Test
     public void TestingNormal() {
@@ -123,19 +137,16 @@ public class CalculatorTest {
         Assert.assertEquals((Double) 8.0, result);
     }
     @Test
-    public void TestingAdd4() {
+    public void TestingEqual() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.ADD, 2.0);
-        c.calculateBi(Calculator.BiOperatorModes.ADD, 4.0);
-        Double result = c.calculateEqual( 3.0);
-        Assert.assertEquals((Double) 9.0, result);
+        Double result = c.calculateEqual( 9.0);
+        Assert.assertEquals((Double) 11.0, result);
     }
     @Test
     public void TestingReset() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.ADD, 2.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.ADD, 3.0);
-        Assert.assertEquals((Double) 5.0, result);
         Assert.assertEquals((Double) NaN, c.reset());
     }
 
