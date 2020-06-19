@@ -1,4 +1,4 @@
-/*
+/**
  * @name        Simple Java Calculator
  * @file        Calculator.java
  * @author      Soria Pierre-Henry
