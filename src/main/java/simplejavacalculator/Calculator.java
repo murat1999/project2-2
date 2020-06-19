@@ -16,11 +16,11 @@ public class Calculator {
 
     /** declaration. */
     public enum BiOperatorModes {
-        normal, add, minus, multiply, divide , xPowerOfY
+        normal, add, minus, multiply, divide, xPowerOfY
     }
     /** declaration. */
     public enum MonoOperatorModes {
-        square, squareRoot, oneDividedBy, cos, sin, tan ,log , rate, abs
+        square, squareRoot, oneDividedBy, cos, sin, tan, log, rate, abs
     }
 
     private Double num1, num2;
@@ -47,7 +47,7 @@ public class Calculator {
             return num1 / num2;
         }
         if (mode == BiOperatorModes.xPowerOfY) {
-            return pow(num1,num2);
+            return pow(num1, num2);
         }
 
         // never reach
@@ -112,7 +112,7 @@ public class Calculator {
         if (newMode == MonoOperatorModes.rate) {
            return num / 100;
         }
-        if (newMode == MonoOperatorModes.abs){
+        if (newMode == MonoOperatorModes.abs) {
             return Math.abs(num);
         }
 
