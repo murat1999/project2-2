@@ -8,9 +8,9 @@
 
 package simplejavacalculator;
 
-public class SimpleJavaCalculator {
+public final class SimpleJavaCalculator {
    private SimpleJavaCalculator() {
-
+      //not called
    }
    /**
     * @param args .
