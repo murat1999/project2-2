@@ -96,11 +96,13 @@ public class Calculator {
         if (newMode == MonoOperatorModes.sin) {
             return Math.sin(num);
         }
+        final int degree = 180;
+        final int degree9 = 90;
         if (newMode == MonoOperatorModes.tan) {
-            if (num == 0 || num % 180 == 0) {
+            if (num == 0 || num % degree == 0) {
                 return 0.0;
             }
-            if (num % 90 == 0 && num % 180 != 0) {
+            if (num % degree9 == 0 && num % degree != 0) {
                 return NaN;
             }
 
@@ -109,8 +111,9 @@ public class Calculator {
         if (newMode == MonoOperatorModes.log) {
             return log10(num);
         }
+        final int hundred = 100;
         if (newMode == MonoOperatorModes.rate) {
-           return num / 100;
+           return num / hundred;
         }
         if (newMode == MonoOperatorModes.abs) {
             return Math.abs(num);
