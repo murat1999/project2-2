@@ -57,9 +57,9 @@ public class UI implements ActionListener {
       panelSub6 = new JPanel(new FlowLayout());
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
-      font = new Font("Consolas",Font.PLAIN, 18);
+      font = new Font("Consolas", Font.PLAIN, 18);
       text = new JTextArea(1, 30);
-      textFont = new Font("Consolas",Font.BOLD, 24);
+      textFont = new Font("Consolas", Font.BOLD, 24);
       but = new JButton[10];
       for (int i = 0; i < 10; i++) {
          but[i] = new JButton(String.valueOf(i));
@@ -200,7 +200,8 @@ public class UI implements ActionListener {
       }
       if (source == butxpowerofy) {
          writer(calc
-                   .calculateBi(Calculator.BiOperatorModes.xPowerOfY, reader()));
+                   .calculateBi(Calculator.BiOperatorModes.xPowerOfY,
+                           reader()));
       }
       if (source == butSquare) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.square,
@@ -212,7 +213,8 @@ public class UI implements ActionListener {
       }
       if (source == butOneDevidedBy) {
          writer(calc.calculateMono(
-                                   Calculator.MonoOperatorModes.oneDividedBy, reader()));
+                                   Calculator.MonoOperatorModes.oneDividedBy,
+                 reader()));
       }
       if (source == butCos) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.cos,
@@ -234,7 +236,7 @@ public class UI implements ActionListener {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.rate,
                                    reader()));
       }
-      if(source == butabs){
+      if (source == butabs) {
          writer(calc.calculateMono(Calculator.MonoOperatorModes.abs, reader()));
       }
       if (source == butEqual) {
