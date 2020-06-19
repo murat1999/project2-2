@@ -54,7 +54,7 @@ public class Calculator {
         throw new Error();
     }
 
-    public Double calculateBi(BiOperatorModes newMode, Double num) {
+    public Double calculateBi(final BiOperatorModes newMode, final Double num) {
         if (mode == BiOperatorModes.normal) {
             num2 = 0.0;
             num1 = num;
@@ -68,7 +68,7 @@ public class Calculator {
         }
     }
 
-    public Double calculateEqual(Double num) {
+    public Double calculateEqual(final Double num) {
         return calculateBi(BiOperatorModes.normal, num);
     }
 
@@ -80,7 +80,7 @@ public class Calculator {
         return NaN;
     }
 
-    public Double calculateMono(MonoOperatorModes newMode, Double num) {
+    public Double calculateMono(final MonoOperatorModes newMode, final Double num) {
         if (newMode == MonoOperatorModes.square) {
             return num * num;
         }
