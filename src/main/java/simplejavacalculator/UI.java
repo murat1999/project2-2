@@ -24,7 +24,7 @@ import javax.swing.BoxLayout;
 import java.io.*;
 
 public final class UI implements ActionListener {
-   /** all variables. */
+   /** all variables.*/
    private final JFrame frame;
    private final JPanel panel;
    private final JPanel panelSub1;
