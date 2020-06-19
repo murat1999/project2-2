@@ -9,6 +9,9 @@
 package simplejavacalculator;
 
 public class SimpleJavaCalculator {
+   private SimpleJavaCalculator() {
+
+   }
    /**
     * @param args .
     */
