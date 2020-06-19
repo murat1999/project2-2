@@ -81,7 +81,8 @@ public final class Calculator {
         return NaN;
     }
 
-    public Double calculateMono(final MonoOperatorModes newMode, final Double num) {
+    public Double calculateMono(final MonoOperatorModes newMode,
+                                final Double num) {
         if (newMode == MonoOperatorModes.square) {
             return num * num;
         }
