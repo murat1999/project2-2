@@ -23,7 +23,7 @@ import javax.swing.BoxLayout;
 
 
 public final class UI implements ActionListener {
-   /** panel frame.*/
+   /** JFrame frame.*/
    private final JFrame frame;
    /** panel.*/
    private final JPanel panel;
