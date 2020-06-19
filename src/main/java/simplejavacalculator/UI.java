@@ -1,4 +1,4 @@
-/**
+/*
  * @name        Simple Java Calculator
  * @file        UI.java
  * @author      Soria Pierre-Henry
@@ -92,7 +92,8 @@ public final class UI implements ActionListener {
    /** text font.*/
    private final Font textFont;
 
-   public UI() throws IOException {
+   /** class.*/
+   public UI() {
       frame = new JFrame("Calculator PH");
 
       panel = new JPanel();
