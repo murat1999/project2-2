@@ -18,7 +18,7 @@ public final class Calculator {
         /**
          * variable names for bi operators.
          */
-        normal, ADD, MINUS, MULTIPLY, DIVIDE, X_POWER_OF_Y
+        NORMAL, ADD, MINUS, MULTIPLY, DIVIDE, X_POWER_OF_Y
     }
     public enum MonoOperatorModes {
         /**
@@ -32,10 +32,10 @@ public final class Calculator {
     /** num2.*/
     private Double num2;
     /** mode.*/
-    private BiOperatorModes mode = BiOperatorModes.normal;
+    private BiOperatorModes mode = BiOperatorModes.NORMAL;
 
     private Double calculateBiImpl() {
-        if (mode == BiOperatorModes.normal) {
+        if (mode == BiOperatorModes.NORMAL) {
             return num2;
         }
         if (mode == BiOperatorModes.ADD) {
@@ -67,7 +67,7 @@ public final class Calculator {
      * @param newMode type of operation.
      */
     public Double calculateBi(final BiOperatorModes newMode, final Double num) {
-        if (mode == BiOperatorModes.normal) {
+        if (mode == BiOperatorModes.NORMAL) {
             num2 = 0.0;
             num1 = num;
             mode = newMode;
@@ -84,14 +84,14 @@ public final class Calculator {
      * @param num number needed.
      */
     public Double calculateEqual(final Double num) {
-        return calculateBi(BiOperatorModes.normal, num);
+        return calculateBi(BiOperatorModes.NORMAL, num);
     }
 
     /** @return NaN.*/
     public Double reset() {
         num2 = 0.0;
         num1 = 0.0;
-        mode = BiOperatorModes.normal;
+        mode = BiOperatorModes.NORMAL;
 
         return NaN;
     }

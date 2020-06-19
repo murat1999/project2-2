@@ -76,50 +76,50 @@ public class CalculatorTest {
     @Test
     public void TestingNormal() {
         Calculator c = new Calculator();
-        c.calculateBi(Calculator.BiOperatorModes.normal, 2.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.normal, 3.0);
+        c.calculateBi(Calculator.BiOperatorModes.NORMAL, 2.0);
+        Double result = c.calculateBi(Calculator.BiOperatorModes.NORMAL, 3.0);
         Assert.assertEquals((Double) NaN, result);
     }
     @Test
     public void TestingAdd() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.ADD, 2.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.normal, 3.0);
+        Double result = c.calculateBi(Calculator.BiOperatorModes.NORMAL, 3.0);
         Assert.assertEquals((Double) 5.0, result);
     }
     @Test
     public void TestingAdd2() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.ADD, 2.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.normal, 0.0);
+        Double result = c.calculateBi(Calculator.BiOperatorModes.NORMAL, 0.0);
         Assert.assertEquals((Double) 2.0, result);
     }
     @Test
     public void TestingMinus() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.MINUS, 5.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.normal, 3.0);
+        Double result = c.calculateBi(Calculator.BiOperatorModes.NORMAL, 3.0);
         Assert.assertEquals((Double) 2.0, result);
     }
     @Test
     public void TestingMultiply() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.MULTIPLY, 2.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.normal, 3.0);
+        Double result = c.calculateBi(Calculator.BiOperatorModes.NORMAL, 3.0);
         Assert.assertEquals((Double) 6.0, result);
     }
     @Test
     public void TestingDivide() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.DIVIDE, 6.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.normal, 3.0);
+        Double result = c.calculateBi(Calculator.BiOperatorModes.NORMAL, 3.0);
         Assert.assertEquals((Double) 2.0, result);
     }
     @Test
     public void TestingXPowerOfY() {
         Calculator c = new Calculator();
         c.calculateBi(Calculator.BiOperatorModes.X_POWER_OF_Y, 2.0);
-        Double result = c.calculateBi(Calculator.BiOperatorModes.normal, 3.0);
+        Double result = c.calculateBi(Calculator.BiOperatorModes.NORMAL, 3.0);
         Assert.assertEquals((Double) 8.0, result);
     }
     @Test
