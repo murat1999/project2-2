@@ -15,16 +15,38 @@ import static java.lang.Math.pow;
 public final class Calculator {
 
     public enum BiOperatorModes {
-        /**
-         * variable names for bi operators.
-         */
-        NORMAL, ADD, MINUS, MULTIPLY, DIVIDE, X_POWER_OF_Y
+        /** normal mode.*/
+        NORMAL,
+        /** add operation.*/
+        ADD,
+        /** minus operation.*/
+        MINUS,
+        /** multiply operation.*/
+        MULTIPLY,
+        /** divide operation.*/
+        DIVIDE,
+        /** x power of y operation.*/
+        X_POWER_OF_Y
     }
     public enum MonoOperatorModes {
-        /**
-         * variables for mono operators.
-         */
-        SQUARE, SQUARE_ROOT, ONE_DIVIDED_BY, COS, SIN, TAN, LOG, RATE, ABS
+        /** square operation.*/
+        SQUARE,
+        /** square root operation.*/
+        SQUARE_ROOT,
+        /** one divided by operation.*/
+        ONE_DIVIDED_BY,
+        /** cos operation.*/
+        COS,
+        /** sin operation.*/
+        SIN,
+        /** tan operation.*/
+        TAN,
+        /** log operation.*/
+        LOG,
+        /** rate operation.*/
+        RATE,
+        /** abs operation.*/
+        ABS
     }
 
     /** num1.*/
