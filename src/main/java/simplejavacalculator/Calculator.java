@@ -63,7 +63,8 @@ public final class Calculator {
     }
 
     /** @return newMode.
-     * @param num .
+     * @param num
+     * @param newMode .
      */
     public Double calculateBi(final BiOperatorModes newMode, final Double num) {
         if (mode == BiOperatorModes.normal) {
