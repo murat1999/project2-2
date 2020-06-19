@@ -24,11 +24,15 @@ import javax.swing.BoxLayout;
 import java.io.*;
 
 public final class UI implements ActionListener {
-   /** all variables.*/
+   /** frame.*/
    private final JFrame frame;
+   /** panel.*/
    private final JPanel panel;
+   /** panelSub1.*/
    private final JPanel panelSub1;
+   /** panelSub2.*/
    private final JPanel panelSub2;
+   /** panelSub3.*/
    private final JPanel panelSub3;
    private final JPanel panelSub4;
    private final JPanel panelSub5;
