@@ -80,10 +80,14 @@ public final class Calculator {
         }
     }
 
+    /** @return num.
+     * @param num .
+     */
     public Double calculateEqual(final Double num) {
         return calculateBi(BiOperatorModes.normal, num);
     }
 
+    /** @return mode.*/
     public Double reset() {
         num2 = 0.0;
         num1 = 0.0;
