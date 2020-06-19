@@ -16,15 +16,15 @@ public final class Calculator {
 
     public enum BiOperatorModes {
         /**
-         * variable names.
+         * variable names for bi operators.
          */
-        normal, ADD, MINUS, MULTIPLY, DIVIDE, XPOWEROFY
+        normal, ADD, MINUS, MULTIPLY, DIVIDE, X_POWER_OF_Y
     }
     public enum MonoOperatorModes {
         /**
-         * variables.
+         * variables for mono operators.
          */
-        SQUARE, SQUAREROOT, ONEDIVIDEDBY, COS, SIN, TAN, LOG, RATE, ABS
+        SQUARE, SQUARE_ROOT, ONE_DIVIDED_BY, COS, SIN, TAN, LOG, RATE, ABS
     }
 
     /** num1.*/
@@ -54,7 +54,7 @@ public final class Calculator {
         if (mode == BiOperatorModes.DIVIDE) {
             return num1 / num2;
         }
-        if (mode == BiOperatorModes.XPOWEROFY) {
+        if (mode == BiOperatorModes.X_POWER_OF_Y) {
             return pow(num1, num2);
         }
 
@@ -62,9 +62,9 @@ public final class Calculator {
         throw new Error();
     }
 
-    /** @return newMode.
-     * @param num .
-     * @param newMode .
+    /** @return number from operation from resulting operations on two number.
+     * @param num number needed.
+     * @param newMode type of operation.
      */
     public Double calculateBi(final BiOperatorModes newMode, final Double num) {
         if (mode == BiOperatorModes.normal) {
@@ -80,14 +80,14 @@ public final class Calculator {
         }
     }
 
-    /** @return num.
-     * @param num .
+    /** @return number from bi operation.
+     * @param num number needed.
      */
     public Double calculateEqual(final Double num) {
         return calculateBi(BiOperatorModes.normal, num);
     }
 
-    /** @return mode.*/
+    /** @return NaN.*/
     public Double reset() {
         num2 = 0.0;
         num1 = 0.0;
@@ -96,19 +96,19 @@ public final class Calculator {
         return NaN;
     }
 
-    /** @return newMode.
-     * @param num .
-     * @param newMode .
+    /** @return result from operation on number.
+     * @param num number needed.
+     * @param newMode type of operation.
      */
     public Double calculateMono(final MonoOperatorModes newMode,
                                 final Double num) {
         if (newMode == MonoOperatorModes.SQUARE) {
             return num * num;
         }
-        if (newMode == MonoOperatorModes.SQUAREROOT) {
+        if (newMode == MonoOperatorModes.SQUARE_ROOT) {
             return Math.sqrt(num);
         }
-        if (newMode == MonoOperatorModes.ONEDIVIDEDBY) {
+        if (newMode == MonoOperatorModes.ONE_DIVIDED_BY) {
             return 1 / num;
         }
         if (newMode == MonoOperatorModes.COS) {

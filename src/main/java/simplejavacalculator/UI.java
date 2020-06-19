@@ -23,7 +23,7 @@ import javax.swing.BoxLayout;
 
 
 public final class UI implements ActionListener {
-   /** frame.*/
+   /** panel frame.*/
    private final JFrame frame;
    /** panel.*/
    private final JPanel panel;
@@ -43,47 +43,47 @@ public final class UI implements ActionListener {
    private final JPanel panelSub7;
    /** panelSub8.*/
    private final JPanel panelSub8;
-   /** text.*/
+   /** text area.*/
    private final JTextArea text;
-   /** button.*/
+   /** button array.*/
    private final JButton[] but;
-   /** butAdd.*/
+   /** button Add.*/
    private final JButton butAdd;
-   /** butMinus.*/
+   /** button Minus.*/
    private final JButton butMinus;
-   /** Multiply.*/
+   /** button Multiply.*/
    private final JButton butMultiply;
-   /** divide.*/
+   /** button divide.*/
    private final JButton butDivide;
-   /** equal.*/
+   /** button equal.*/
    private final JButton butEqual;
-   /** cancel.*/
+   /** button cancel.*/
    private final JButton butCancel;
-   /** square root.*/
+   /** button square root.*/
    private final JButton butSquareRoot;
-   /** square.*/
+   /** button square.*/
    private final JButton butSquare;
-   /** one divided by.*/
+   /** button one divided by.*/
    private final JButton butOneDividedBy;
-   /** cos.*/
+   /** button cos.*/
    private final JButton butCos;
-   /** sin.*/
+   /** button sin.*/
    private final JButton butSin;
-   /** tan.*/
+   /** button tan.*/
    private final JButton butTan;
-   /** x power of y.*/
+   /** button x power of y.*/
    private final JButton butxpowerofy;
-   /** log.*/
+   /** button log.*/
    private final JButton butlog;
-   /** rate.*/
+   /** button rate.*/
    private final JButton butrate;
-   /** abs.*/
+   /** button abs.*/
    private final JButton butabs;
-   /** binary.*/
+   /** button binary.*/
    private final JButton butBinary;
-   /** calc.*/
+   /** calculator.*/
    private final Calculator calc;
-   /** button value.*/
+   /** button values.*/
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6",
       "7", "8", "9"};
    /** font.*/
@@ -95,6 +95,9 @@ public final class UI implements ActionListener {
    public UI() {
       frame = new JFrame("Calculator PH");
 
+      final int fontSize = 18;
+      final int textSize = 30;
+      final int textFontSize = 24;
       panel = new JPanel();
       panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
       panelSub1 = new JPanel(new FlowLayout());
@@ -105,9 +108,6 @@ public final class UI implements ActionListener {
       panelSub6 = new JPanel(new FlowLayout());
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
-      final int fontSize = 18;
-      final int textSize = 30;
-      final int textFontSize = 24;
       font = new Font("Consolas", Font.PLAIN, fontSize);
       text = new JTextArea(1, textSize);
       textFont = new Font("Consolas", Font.BOLD, textFontSize);
@@ -135,10 +135,20 @@ public final class UI implements ActionListener {
       butBinary = new JButton("Bin");
       calc = new Calculator();
    }
-   /** comment.*/
+   /** initialize the UI.*/
    public void init() {
       final int width = 450;
       final int height = 450;
+      final int panelFive = 210;
+      final int strut = 15;
+      final int forth = 4;
+      final int fifth = 5;
+      final int sixth = 6;
+      final int seventh = 7;
+      final int eighth = 8;
+      final int ninth = 9;
+      final int third = 3;
+      final int panelWidth = 100;
       frame.setSize(width, height);
       frame.setVisible(true);
       frame.setLocationRelativeTo(null);
@@ -168,21 +178,12 @@ public final class UI implements ActionListener {
       butabs.setFont(font);
       butCancel.setFont(font);
       butBinary.setFont(font);
-      final int panelWidth = 100;
       panel.add(Box.createHorizontalStrut(panelWidth));
       panelSub1.add(text);
       panel.add(panelSub1);
       panelSub2.add(but[1]);
       panelSub2.add(but[2]);
-      final int third = 3;
       panelSub2.add(but[third]);
-      final int strut = 15;
-      final int forth = 4;
-      final int fifth = 5;
-      final int sixth = 6;
-      final int seventh = 7;
-      final int eighth = 8;
-      final int ninth = 9;
       panelSub2.add(Box.createHorizontalStrut(strut));
       panelSub2.add(butAdd);
       panelSub2.add(butMinus);
@@ -202,7 +203,6 @@ public final class UI implements ActionListener {
       panelSub4.add(butCancel);
       panel.add(panelSub4);
       panelSub5.add(but[0]);
-      final int panelFive = 210;
       panelSub5.add(Box.createHorizontalStrut(panelFive));
       panel.add(panelSub5);
       panelSub6.add(butSquare);
@@ -267,7 +267,7 @@ public final class UI implements ActionListener {
       }
       if (source == butxpowerofy) {
          writer(calc
-                   .calculateBi(Calculator.BiOperatorModes.XPOWEROFY,
+                   .calculateBi(Calculator.BiOperatorModes.X_POWER_OF_Y,
                            reader()));
       }
       if (source == butSquare) {
@@ -275,12 +275,12 @@ public final class UI implements ActionListener {
                                    reader()));
       }
       if (source == butSquareRoot) {
-         writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUAREROOT,
+         writer(calc.calculateMono(Calculator.MonoOperatorModes.SQUARE_ROOT,
                                    reader()));
       }
       if (source == butOneDividedBy) {
          writer(calc.calculateMono(
-                                   Calculator.MonoOperatorModes.ONEDIVIDEDBY,
+                                   Calculator.MonoOperatorModes.ONE_DIVIDED_BY,
                  reader()));
       }
       if (source == butCos) {
@@ -324,7 +324,7 @@ public final class UI implements ActionListener {
          System.err.println("Error while parse to binary." + ex.toString());
       }
    }
-   /** @return num .*/
+   /** @return number .*/
    public Double reader() {
       double num;
       String str;
@@ -332,7 +332,7 @@ public final class UI implements ActionListener {
       num = Double.parseDouble(str);
       return num;
    }
-   /** @param num .*/
+   /** @param num number that needed.*/
    public void writer(final Double num) {
       if (Double.isNaN(num)) {
          text.setText("");
