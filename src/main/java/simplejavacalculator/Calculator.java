@@ -96,6 +96,10 @@ public final class Calculator {
         return NaN;
     }
 
+    /** @return newMode.
+     * @param num
+     * @param newMode .
+     */
     public Double calculateMono(final MonoOperatorModes newMode,
                                 final Double num) {
         if (newMode == MonoOperatorModes.square) {
