@@ -34,34 +34,62 @@ public final class UI implements ActionListener {
    private final JPanel panelSub2;
    /** panelSub3.*/
    private final JPanel panelSub3;
+   /** panelSub4.*/
    private final JPanel panelSub4;
+   /** panelSub5.*/
    private final JPanel panelSub5;
+   /** panelSub6.*/
    private final JPanel panelSub6;
+   /** panelSub7.*/
    private final JPanel panelSub7;
+   /** panelSub8.*/
    private final JPanel panelSub8;
+   /** text.*/
    private final JTextArea text;
+   /** button.*/
    private final JButton[] but;
+   /** butAdd.*/
    private final JButton butAdd;
+   /** butMinus.*/
    private final JButton butMinus;
+   /** Multiply.*/
    private final JButton butMultiply;
+   /** divide.*/
    private final JButton butDivide;
+   /** equal.*/
    private final JButton butEqual;
+   /** cancel.*/
    private final JButton butCancel;
+   /** square root.*/
    private final JButton butSquareRoot;
+   /** square.*/
    private final JButton butSquare;
+   /** one divided by.*/
    private final JButton butOneDividedBy;
+   /** cos.*/
    private final JButton butCos;
+   /** sin.*/
    private final JButton butSin;
+   /** tan.*/
    private final JButton butTan;
+   /** x power of y.*/
    private final JButton butxpowerofy;
+   /** log.*/
    private final JButton butlog;
+   /** rate.*/
    private final JButton butrate;
+   /** abs.*/
    private final JButton butabs;
+   /** binary.*/
    private final JButton butBinary;
+   /** calc.*/
    private final Calculator calc;
+   /** button value.*/
    private final String[] buttonValue = {"0", "1", "2", "3", "4", "5", "6",
       "7", "8", "9"};
+   /** font.*/
    private final Font font;
+   /** text font.*/
    private final Font textFont;
 
    public UI() throws IOException {
@@ -77,9 +105,12 @@ public final class UI implements ActionListener {
       panelSub6 = new JPanel(new FlowLayout());
       panelSub7 = new JPanel(new FlowLayout());
       panelSub8 = new JPanel(new FlowLayout());
-      font = new Font("Consolas", Font.PLAIN, 18);
-      text = new JTextArea(1, 30);
-      textFont = new Font("Consolas", Font.BOLD, 24);
+      final int fontSize = 18;
+      final int textSize = 30;
+      final int textFontSize = 24;
+      font = new Font("Consolas", Font.PLAIN, fontSize);
+      text = new JTextArea(1, textSize);
+      textFont = new Font("Consolas", Font.BOLD, textFontSize);
       but = new JButton[10];
       for (int i = 0; i < 10; i++) {
          but[i] = new JButton(String.valueOf(i));
