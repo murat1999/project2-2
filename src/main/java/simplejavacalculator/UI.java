@@ -324,7 +324,7 @@ public final class UI implements ActionListener {
          System.err.println("Error while parse to binary." + ex.toString());
       }
    }
-   /** reader.*/
+   /** @return num .*/
    public Double reader() {
       double num;
       String str;
