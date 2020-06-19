@@ -27,8 +27,11 @@ public final class Calculator {
         square, squareRoot, oneDividedBy, cos, sin, tan, log, rate, abs
     }
 
+    /** num1.*/
     private Double num1;
+    /** num2.*/
     private Double num2;
+    /** mode.*/
     private BiOperatorModes mode = BiOperatorModes.normal;
 
     private Double calculateBiImpl() {
@@ -59,6 +62,7 @@ public final class Calculator {
         throw new Error();
     }
 
+    /** calculateBi.*/
     public Double calculateBi(final BiOperatorModes newMode, final Double num) {
         if (mode == BiOperatorModes.normal) {
             num2 = 0.0;
