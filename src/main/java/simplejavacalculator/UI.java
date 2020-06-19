@@ -111,8 +111,9 @@ public final class UI implements ActionListener {
       font = new Font("Consolas", Font.PLAIN, fontSize);
       text = new JTextArea(1, textSize);
       textFont = new Font("Consolas", Font.BOLD, textFontSize);
-      but = new JButton[10];
-      for (int i = 0; i < 10; i++) {
+      final int sizeButton = 10;
+      but = new JButton[sizeButton];
+      for (int i = 0; i < sizeButton; i++) {
          but[i] = new JButton(String.valueOf(i));
       }
       butAdd = new JButton("+");
@@ -135,7 +136,9 @@ public final class UI implements ActionListener {
       calc = new Calculator();
    }
    public void init() {
-      frame.setSize(450, 450);
+      final int width = 450;
+      final int height = 450;
+      frame.setSize(width, height);
       frame.setVisible(true);
       frame.setLocationRelativeTo(null);
       frame.setResizable(false);
@@ -143,7 +146,8 @@ public final class UI implements ActionListener {
 
       text.setFont(textFont);
       text.setEditable(false);
-      for (int i = 0; i < 10; i++) {
+      final int iter = 10;
+      for (int i = 0; i < iter; i++) {
          but[i].setFont(font);
       }
       butAdd.setFont(font);
@@ -163,32 +167,42 @@ public final class UI implements ActionListener {
       butabs.setFont(font);
       butCancel.setFont(font);
       butBinary.setFont(font);
-      panel.add(Box.createHorizontalStrut(100));
+      final int panelWidth = 100;
+      panel.add(Box.createHorizontalStrut(panelWidth));
       panelSub1.add(text);
       panel.add(panelSub1);
       panelSub2.add(but[1]);
       panelSub2.add(but[2]);
-      panelSub2.add(but[3]);
-      panelSub2.add(Box.createHorizontalStrut(15));
+      final int third = 3;
+      panelSub2.add(but[third]);
+      final int strut = 15;
+      final int forth = 4;
+      final int fifth = 5;
+      final int sixth = 6;
+      final int seventh = 7;
+      final int eighth = 8;
+      final int ninth = 9;
+      panelSub2.add(Box.createHorizontalStrut(strut));
       panelSub2.add(butAdd);
       panelSub2.add(butMinus);
       panel.add(panelSub2);
-      panelSub3.add(but[4]);
-      panelSub3.add(but[5]);
-      panelSub3.add(but[6]);
-      panelSub3.add(Box.createHorizontalStrut(15));
+      panelSub3.add(but[forth]);
+      panelSub3.add(but[fifth]);
+      panelSub3.add(but[sixth]);
+      panelSub3.add(Box.createHorizontalStrut(strut));
       panelSub3.add(butMultiply);
       panelSub3.add(butDivide);
       panel.add(panelSub3);
-      panelSub4.add(but[7]);
-      panelSub4.add(but[8]);
-      panelSub4.add(but[9]);
-      panelSub4.add(Box.createHorizontalStrut(15));
+      panelSub4.add(but[seventh]);
+      panelSub4.add(but[eighth]);
+      panelSub4.add(but[ninth]);
+      panelSub4.add(Box.createHorizontalStrut(strut));
       panelSub4.add(butEqual);
       panelSub4.add(butCancel);
       panel.add(panelSub4);
       panelSub5.add(but[0]);
-      panelSub5.add(Box.createHorizontalStrut(210));
+      final int panelFive = 210;
+      panelSub5.add(Box.createHorizontalStrut(panelFive));
       panel.add(panelSub5);
       panelSub6.add(butSquare);
       panelSub6.add(butSquareRoot);
@@ -204,7 +218,7 @@ public final class UI implements ActionListener {
       panelSub8.add(butabs);
       panelSub8.add(butBinary);
       panel.add(panelSub8);
-      for (int i = 0; i < 10; i++) {
+      for (int i = 0; i < iter; i++) {
          but[i].addActionListener(this);
       }
       butAdd.addActionListener(this);
@@ -229,7 +243,8 @@ public final class UI implements ActionListener {
    @Override
    public void actionPerformed(final ActionEvent e) {
       final Object source = e.getSource();
-      for (int i = 0; i < 10; i++) {
+      final int iteration = 10;
+      for (int i = 0; i < iteration; i++) {
          if (source == but[i]) {
             text.replaceSelection(buttonValue[i]);
             return;
