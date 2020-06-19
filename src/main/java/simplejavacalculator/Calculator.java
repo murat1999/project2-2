@@ -14,11 +14,15 @@ import static java.lang.Math.pow;
 
 public final class Calculator {
 
-    /** declaration. */
+    /**
+     * variable names.
+     */
     public enum BiOperatorModes {
         normal, add, minus, multiply, divide, xPowerOfY
     }
-    /** declaration. */
+    /**
+     * variables.
+     */
     public enum MonoOperatorModes {
         square, squareRoot, oneDividedBy, cos, sin, tan, log, rate, abs
     }
