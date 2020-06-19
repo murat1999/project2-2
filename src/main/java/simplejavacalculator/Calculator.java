@@ -1,4 +1,4 @@
-/**
+/*
  * @name        Simple Java Calculator
  * @file        Calculator.java
  * @author      Soria Pierre-Henry
@@ -63,7 +63,7 @@ public final class Calculator {
     }
 
     /** @return newMode.
-     * @param num
+     * @param num .
      * @param newMode .
      */
     public Double calculateBi(final BiOperatorModes newMode, final Double num) {
@@ -97,7 +97,7 @@ public final class Calculator {
     }
 
     /** @return newMode.
-     * @param num
+     * @param num .
      * @param newMode .
      */
     public Double calculateMono(final MonoOperatorModes newMode,
