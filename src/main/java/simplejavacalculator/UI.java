@@ -85,8 +85,7 @@ public final class UI implements ActionListener {
    private final Calculator calc;
    /** button values.*/
    private static final String[] BUTTON_VALUE = {"0", "1", "2", "3", "4", "5",
-           "6",
-      "7", "8", "9"};
+           "6", "7", "8", "9"};
    /** font.*/
    private final Font font;
    /** text font.*/
